@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { Banner } from './components/Banner';
+import { Featured } from './components/Featured';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { Slider } from './components/Slider';
+
+
+const Container = styled.div`
+  padding: 1.5rem 5% 2.5rem;
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #171616;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <Hero />
+      <Featured />
+      <Slider />
+      <Banner />
+      <Footer />
+    </Container>
   );
 }
 
