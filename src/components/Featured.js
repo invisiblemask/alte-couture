@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ladiesWear } from '../data'
+import { lgTablet, mobile, smTablet } from '../responsive'
 
 const zoomIn = keyframes`
     from {
@@ -24,6 +25,10 @@ const zoomOut = keyframes`
 
 const Container = styled.div`
     margin-top: 4rem;
+
+    ${mobile({
+        marginTop: '6rem'
+    })}
 `
 
 const TextContainer = styled.div`
@@ -52,6 +57,21 @@ const FeaturedGrid = styled.div`
     grid-template-rows: repeat(2, 420px);
     column-gap: 1.5rem;
     row-gap: 1.5rem;
+
+    ${mobile({
+        gridTemplateColumns: '1fr',
+        gridTemplateRows: 'unset',
+    })}
+
+    ${smTablet({
+        gridTemplateColumns: '1fr',
+        gridTemplateRows: 'unset',
+    })}
+
+    ${lgTablet({
+        gridTemplateColumns: '1fr',
+        gridTemplateRows: 'unset',
+    })}
 `
 
 const FeaturedItem = styled.div`
@@ -62,7 +82,8 @@ const FeaturedItem = styled.div`
     display: flex;
     justify-content: center;
     background-position: top;
-    background-size: cover;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
     animation: ${zoomOut} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 forwards;
 
     &:hover {
@@ -76,7 +97,7 @@ const FeaturedItem = styled.div`
 
     &:nth-child(2) {
         grid-row: 1/2;
-        align-items: flex-end;
+        align-items: center;
     }
 
     &:nth-child(3) {
@@ -86,17 +107,54 @@ const FeaturedItem = styled.div`
 
     &:nth-child(4) {
         grid-row: 2/3;
-        align-items: flex-end;
+        align-items: center;
     }
+
+    ${mobile({
+        gridRow: 'unset !important',
+        height: '450px',
+        backgroundPosition: 'center'
+    })}
+
+    ${smTablet({
+        gridRow: 'unset !important',
+        height: '500px',
+        backgroundPosition: 'center'
+    })}
+
+    ${lgTablet({
+        gridRow: 'unset !important',
+        height: '500px',
+        backgroundPosition: 'center'
+    })}
 `
 
 const ItemLabel = styled.p`
     font-size: 1.7rem;
     margin: 0;
+
+    ${mobile({
+        fontSize: '1.2rem'
+    })}
 `
 
 const FeaturedCta = styled.div`
     margin: 4rem 0 0;
+
+    ${mobile({
+        display: 'grid',
+        placeItems: 'center'
+    })}
+
+    ${smTablet({
+        display: 'grid',
+        placeItems: 'center'
+    })}
+
+    ${lgTablet({
+        display: 'grid',
+        placeItems: 'center'
+    })}
 `
 
 const Button = styled.button`

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { mensWear } from '../data'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
     position: relative;
@@ -49,6 +50,10 @@ const SliderItem = styled.div`
     &:not(:last-child) {
         margin-right: 1.5rem;
     }
+
+    ${mobile({
+        width: '340px'
+    })}
 `
 
 const SliderLabel = styled.p`
@@ -59,6 +64,11 @@ const SliderLabel = styled.p`
 
 const FeaturedCta = styled.div`
     margin: 4rem 0 0;
+
+    ${mobile({
+        display: 'grid',
+        placeItems: 'center'
+    })}
 `
 
 const Button = styled.button`

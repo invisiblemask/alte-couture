@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaTwitter, FaGithub } from 'react-icons/fa'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
     display: flex;
@@ -12,6 +13,7 @@ const Logo = styled.div`
     font-size: 1rem;
     color: #ffffff;
     font-family: 'Marsek', sans-serif;
+    ${mobile({fontSize: '.8rem'})}
 `
 
 const NavContainer = styled.div`
@@ -41,6 +43,8 @@ const NavLink = styled.a`
     text-decoration: none;
     font-family: 'Marsek', sans-serif;
     transition: color ease-in 0.2s;
+
+    ${mobile({fontSize: '1rem'})}
 
     &:hover {
         color: #6a6a6a;

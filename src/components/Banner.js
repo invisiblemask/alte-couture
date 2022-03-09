@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BannerBg from '../assets/images/banner-bg.png'
+import { lgTablet, mobile, smTablet } from '../responsive'
 
 const Container = styled.div`
     position: relative;
@@ -11,6 +12,21 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    ${mobile({
+        height: '500px',
+        marginTop: '8rem'
+    })}
+
+    ${smTablet({
+        height: '500px',
+        marginTop: '8rem'
+    })}
+
+    ${lgTablet({
+        height: '500px',
+        marginTop: '8rem'
+    })}
 `
 
 const Title = styled.h2`
@@ -20,6 +36,18 @@ const Title = styled.h2`
     margin: 0;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
+
+    ${mobile({
+        fontSize: '1.5rem'
+    })}    
+
+    ${smTablet({
+        fontSize: '1.5rem'
+    })}    
+
+    ${lgTablet({
+        fontSize: '2rem'
+    })}    
 `
 
 const SubTitle = styled.h3`
@@ -29,6 +57,18 @@ const SubTitle = styled.h3`
     margin: 0;
     color: #ffffff;
     text-align: center;
+
+    ${mobile({
+        fontSize: '1.5rem'
+    })}
+
+    ${smTablet({
+        fontSize: '1.5rem'
+    })}
+
+    ${lgTablet({
+        fontSize: '2rem'
+    })}
 `
 
 const FeaturedCta = styled.div`

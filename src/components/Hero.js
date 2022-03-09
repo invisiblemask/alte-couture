@@ -3,16 +3,37 @@ import styled from 'styled-components'
 import { ReactComponent as Arrow } from '../assets/svgs/scroll-arrow.svg'
 import { ReactComponent as Cross } from '../assets/svgs/crosses.svg'
 import Model from '../assets/images/alte-model.png'
+import { lgTablet, mobile, smTablet } from '../responsive'
 
 const Container = styled.div`
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     overflow-x: hidden;
     margin-top: 4rem;
+
+    ${mobile({gridTemplateColumns: '1fr'})}
+    ${smTablet({gridTemplateColumns: '1fr'})}
+    ${lgTablet({gridTemplateColumns: '1fr'})}
+
 `
 
 const HeroText = styled.div`
     margin-top: 20%;
+
+    ${mobile({
+        marginTop: '6rem',
+        marginBottom: '4rem'
+    })}
+
+    ${smTablet({
+        marginTop: '6rem',
+        marginBottom: '4rem'
+    })}
+
+    ${lgTablet({
+        marginTop: '6rem',
+        marginBottom: '4rem'
+    })}
 `
 
 const HeroTitle = styled.h1`
@@ -23,6 +44,10 @@ const HeroTitle = styled.h1`
     margin: 0;
     color: transparent;
     -webkit-text-stroke: 1px #575757;
+
+    ${mobile({fontSize: '1.5rem'})}
+    ${smTablet({fontSize: '1.5rem'})}
+    ${lgTablet({fontSize: '2rem'})}
 `
 
 const HeroSubtitle = styled.h2`
@@ -32,6 +57,10 @@ const HeroSubtitle = styled.h2`
     line-height: 1.3;
     margin: 0;
     color: #ffffff;
+
+    ${mobile({fontSize: '1.5rem'})}
+    ${smTablet({fontSize: '1.5rem'})}
+    ${lgTablet({fontSize: '2rem'})}
 `
 
 const Icon = styled.div`
@@ -48,7 +77,15 @@ const HeroModel = styled.div`
 `
 
 const Img = styled.img`
+    max-width: 100%;
 
+    ${smTablet({
+        maxWidth: '70%'
+    })}
+
+    ${lgTablet({
+        maxWidth: '70%'
+    })}
 `
 
 const ModelLabel = styled.div`
@@ -61,10 +98,23 @@ const ModelLabel = styled.div`
     margin: auto;
     color: #000000;
 
+    ${mobile({
+        height: '35px',
+    })}
+
+    ${smTablet({
+        height: '35px',
+    })}
+
+
     &.forward {
         z-index: 3;
         top: 30%;
         font-size: .95rem;
+
+        ${mobile({
+            fontSize: '.8rem'
+        })}
     }
 
     &.behind {
@@ -80,12 +130,28 @@ const HeroScroll = styled.div`
     display: flex;
     align-items: center;
     transform: rotate(90deg);
+
+    ${mobile({
+        right: '-6rem',
+    })}
+
+    ${smTablet({
+        right: '-7rem',
+    })}
+
+    ${lgTablet({
+        right: '-7rem',
+    })}
 `
 
 const ScrollText = styled.p`
     margin: 0;
     font-size: .9rem;
     color: #6a6a6a;
+
+    ${mobile({
+        fontSize: '.8rem'
+    })}
 `
 
 export const Hero = () => {
