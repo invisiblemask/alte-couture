@@ -8,6 +8,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     overflow-x: hidden;
+    margin-top: 4rem;
 `
 
 const HeroText = styled.div`
