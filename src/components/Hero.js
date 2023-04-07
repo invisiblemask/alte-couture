@@ -11,9 +11,9 @@ const Container = styled.div`
     overflow-x: hidden;
     margin-top: 4rem;
 
-    ${mobile({gridTemplateColumns: '1fr'})}
-    ${smTablet({gridTemplateColumns: '1fr'})}
-    ${lgTablet({gridTemplateColumns: '1fr'})}
+    ${mobile({ gridTemplateColumns: '1fr' })}
+    ${smTablet({ gridTemplateColumns: '1fr' })}
+    ${lgTablet({ gridTemplateColumns: '1fr' })}
 
 `
 
@@ -21,19 +21,19 @@ const HeroText = styled.div`
     margin-top: 20%;
 
     ${mobile({
-        marginTop: '6rem',
-        marginBottom: '4rem'
-    })}
+    marginTop: '6rem',
+    marginBottom: '4rem'
+})}
 
     ${smTablet({
-        marginTop: '6rem',
-        marginBottom: '4rem'
-    })}
+    marginTop: '6rem',
+    marginBottom: '4rem'
+})}
 
     ${lgTablet({
-        marginTop: '6rem',
-        marginBottom: '4rem'
-    })}
+    marginTop: '6rem',
+    marginBottom: '4rem'
+})}
 `
 
 const HeroTitle = styled.h1`
@@ -45,9 +45,9 @@ const HeroTitle = styled.h1`
     color: transparent;
     -webkit-text-stroke: 1px #575757;
 
-    ${mobile({fontSize: '1.5rem'})}
-    ${smTablet({fontSize: '1.5rem'})}
-    ${lgTablet({fontSize: '2rem'})}
+    ${mobile({ fontSize: '1.5rem' })}
+    ${smTablet({ fontSize: '1.5rem' })}
+    ${lgTablet({ fontSize: '2rem' })}
 `
 
 const HeroSubtitle = styled.h2`
@@ -58,9 +58,9 @@ const HeroSubtitle = styled.h2`
     margin: 0;
     color: #ffffff;
 
-    ${mobile({fontSize: '1.5rem'})}
-    ${smTablet({fontSize: '1.5rem'})}
-    ${lgTablet({fontSize: '2rem'})}
+    ${mobile({ fontSize: '1.5rem' })}
+    ${smTablet({ fontSize: '1.5rem' })}
+    ${lgTablet({ fontSize: '2rem' })}
 `
 
 const Icon = styled.div`
@@ -80,12 +80,12 @@ const Img = styled.img`
     max-width: 100%;
 
     ${smTablet({
-        maxWidth: '70%'
-    })}
+    maxWidth: '70%'
+})}
 
     ${lgTablet({
-        maxWidth: '70%'
-    })}
+    maxWidth: '70%'
+})}
 `
 
 const ModelLabel = styled.div`
@@ -99,12 +99,12 @@ const ModelLabel = styled.div`
     color: #000000;
 
     ${mobile({
-        height: '35px',
-    })}
+    height: '35px',
+})}
 
     ${smTablet({
-        height: '35px',
-    })}
+    height: '35px',
+})}
 
 
     &.forward {
@@ -113,8 +113,8 @@ const ModelLabel = styled.div`
         font-size: .95rem;
 
         ${mobile({
-            fontSize: '.8rem'
-        })}
+    fontSize: '.8rem'
+})}
     }
 
     &.behind {
@@ -125,23 +125,23 @@ const ModelLabel = styled.div`
 
 const HeroScroll = styled.div`
     position: absolute;
-    right: -5rem;
+    right: -2rem;
     top: 15%;
     display: flex;
     align-items: center;
     transform: rotate(90deg);
 
     ${mobile({
-        right: '-6rem',
-    })}
+    right: '-6rem',
+})}
 
     ${smTablet({
-        right: '-7rem',
-    })}
+    right: '-7rem',
+})}
 
     ${lgTablet({
-        right: '-7rem',
-    })}
+    right: '-7rem',
+})}
 `
 
 const ScrollText = styled.p`
@@ -150,34 +150,34 @@ const ScrollText = styled.p`
     color: #6a6a6a;
 
     ${mobile({
-        fontSize: '.8rem'
-    })}
+    fontSize: '.8rem'
+})}
 `
 
 export const Hero = () => {
-  return (
-    <Container>
-        <HeroText>
-            <HeroTitle>FASHION REDEFINED</HeroTitle>
-            <HeroSubtitle>
-                ROCK YOUR STYLE, <br /> BEING BORING ISN'T <br /> ALLOWED HERE
-            </HeroSubtitle>
-            <Icon>
-                <Cross />
-            </Icon>
-        </HeroText>
+    return (
+        <Container>
+            <HeroText>
+                <HeroTitle>FASHION REDEFINED</HeroTitle>
+                <HeroSubtitle>
+                    ROCK YOUR STYLE, <br /> BEING BORING ISN'T <br /> ALLOWED HERE
+                </HeroSubtitle>
+                <Icon>
+                    <Cross />
+                </Icon>
+            </HeroText>
 
-        <HeroModel>
-            <Img src={Model} alt="alte model" />
-            <ModelLabel className='forward'>ALTE COUTURE</ModelLabel>
-            <ModelLabel className='behind'></ModelLabel>
-        </HeroModel>
+            <HeroModel>
+                <Img src={Model} alt="alte model" />
+                <ModelLabel className='forward'>ALTE COUTURE</ModelLabel>
+                <ModelLabel className='behind'></ModelLabel>
+            </HeroModel>
 
-        <HeroScroll>
-            <ScrollText>Scroll for more details</ScrollText>
-            {/* code for the className arrow is in index.html file in the style tag */}
-            <Arrow className='arrow' />
-        </HeroScroll>
-    </Container>
-  )
+            <HeroScroll>
+                <ScrollText>Scroll for more details</ScrollText>
+                {/* code for the className arrow is in index.html file in the style tag */}
+                <Arrow className='arrow' />
+            </HeroScroll>
+        </Container>
+    )
 }

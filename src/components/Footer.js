@@ -14,16 +14,16 @@ const FooterText = styled.div`
   color: #6a6a6a;
 
   ${mobile({
-    fontSize: '.9rem'
-  })}
+  fontSize: '.9rem'
+})}
 
   ${smTablet({
-    fontSize: '.9rem'
-  })}
+  fontSize: '.9rem'
+})}
 
   ${lgTablet({
-    fontSize: '.9rem'
-  })}
+  fontSize: '.9rem'
+})}
 `
 
 export const Footer = () => {

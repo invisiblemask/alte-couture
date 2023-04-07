@@ -14,19 +14,19 @@ const Container = styled.div`
     justify-content: center;
 
     ${mobile({
-        height: '500px',
-        marginTop: '8rem'
-    })}
+    height: '500px',
+    marginTop: '8rem'
+})}
 
     ${smTablet({
-        height: '500px',
-        marginTop: '8rem'
-    })}
+    height: '500px',
+    marginTop: '8rem'
+})}
 
     ${lgTablet({
-        height: '500px',
-        marginTop: '8rem'
-    })}
+    height: '500px',
+    marginTop: '8rem'
+})}
 `
 
 const Title = styled.h2`
@@ -38,16 +38,16 @@ const Title = styled.h2`
     -webkit-text-stroke: 1px #ffffff;
 
     ${mobile({
-        fontSize: '1.5rem'
-    })}    
+    fontSize: '1.5rem'
+})}    
 
     ${smTablet({
-        fontSize: '1.5rem'
-    })}    
+    fontSize: '1.5rem'
+})}    
 
     ${lgTablet({
-        fontSize: '2rem'
-    })}    
+    fontSize: '2rem'
+})}    
 `
 
 const SubTitle = styled.h3`
@@ -59,16 +59,16 @@ const SubTitle = styled.h3`
     text-align: center;
 
     ${mobile({
-        fontSize: '1.5rem'
-    })}
+    fontSize: '1.5rem'
+})}
 
     ${smTablet({
-        fontSize: '1.5rem'
-    })}
+    fontSize: '1.5rem'
+})}
 
     ${lgTablet({
-        fontSize: '2rem'
-    })}
+    fontSize: '2rem'
+})}
 `
 
 const FeaturedCta = styled.div`
@@ -92,14 +92,14 @@ const Button = styled.button`
 `
 
 export const Banner = () => {
-  return (
-    <Container style={{backgroundImage: `url(${BannerBg})`}}>
-        <Title>FASHION REDEFINED.</Title>
-        <SubTitle>ROCK YOUR STYLE, <br /> BEING BORING ISN’T <br /> ALLOWED HERE</SubTitle>
+    return (
+        <Container style={{ backgroundImage: `url(${BannerBg})` }}>
+            <Title>FASHION REDEFINED.</Title>
+            <SubTitle>ROCK YOUR STYLE, <br /> BEING BORING ISN’T <br /> ALLOWED HERE</SubTitle>
 
-        <FeaturedCta>
-            <Button>WE'RE HIRING</Button>
-        </FeaturedCta>
-    </Container>
-  )
+            <FeaturedCta>
+                <Button>WE'RE HIRING</Button>
+            </FeaturedCta>
+        </Container>
+    )
 }

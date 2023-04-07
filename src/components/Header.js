@@ -13,7 +13,7 @@ const Logo = styled.div`
     font-size: 1rem;
     color: #ffffff;
     font-family: 'Marsek', sans-serif;
-    ${mobile({fontSize: '.8rem'})}
+    ${mobile({ fontSize: '.8rem' })}
 `
 
 const NavContainer = styled.div`
@@ -44,7 +44,7 @@ const NavLink = styled.a`
     font-family: 'Marsek', sans-serif;
     transition: color ease-in 0.2s;
 
-    ${mobile({fontSize: '1rem'})}
+    ${mobile({ fontSize: '1rem' })}
 
     &:hover {
         color: #6a6a6a;
@@ -52,32 +52,32 @@ const NavLink = styled.a`
 `
 
 export const Header = () => {
-  return (
-    <Container>
-        <Logo>ALTE COUTURE</Logo>
+    return (
+        <Container>
+            <Logo>ALTE COUTURE</Logo>
 
-        <NavContainer>
-            <NavList>
-                <ListItem>
-                    <NavLink
-                        href='https://twitter.com/reyokeke'
-                        target='_blank'
-                        rel='noreferrer noopener'
-                    >
-                        <FaTwitter />
-                    </NavLink>
-                </ListItem>
-                <ListItem>
-                    <NavLink
-                        href='https://github.com/invisiblemask/alte-couture'
-                        target='_blank'
-                        rel='noreferrer noopener'
+            <NavContainer>
+                <NavList>
+                    <ListItem>
+                        <NavLink
+                            href='https://twitter.com/reyokeke'
+                            target='_blank'
+                            rel='noreferrer noopener'
                         >
-                            <FaGithub style={{marginLeft: '2rem'}} />
+                            <FaTwitter />
                         </NavLink>
                     </ListItem>
-            </NavList>
-        </NavContainer>
-    </Container>
-  )
+                    <ListItem>
+                        <NavLink
+                            href='https://github.com/invisiblemask/alte-couture'
+                            target='_blank'
+                            rel='noreferrer noopener'
+                        >
+                            <FaGithub style={{ marginLeft: '2rem' }} />
+                        </NavLink>
+                    </ListItem>
+                </NavList>
+            </NavContainer>
+        </Container>
+    )
 }

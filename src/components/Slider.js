@@ -52,8 +52,8 @@ const SliderItem = styled.div`
     }
 
     ${mobile({
-        width: '340px'
-    })}
+    width: '340px'
+})}
 `
 
 const SliderLabel = styled.p`
@@ -66,9 +66,9 @@ const FeaturedCta = styled.div`
     margin: 4rem 0 0;
 
     ${mobile({
-        display: 'grid',
-        placeItems: 'center'
-    })}
+    display: 'grid',
+    placeItems: 'center'
+})}
 `
 
 const Button = styled.button`
@@ -88,26 +88,26 @@ const Button = styled.button`
 `
 
 export const Slider = () => {
-  return (
-    <Container>
-        <TextContainer>
-            <Title>FEATURED</Title>
-            <SubTitle>Men Summer Collection</SubTitle>
-        </TextContainer>
-        <SlideShow>
-            {mensWear.map((item) => (
-                <SliderItem
-                    item={item}
-                    key={item.name}
-                    style={{backgroundImage: `url(${item.image})`}}
-                >
-                    <SliderLabel>{item.name}</SliderLabel>
-                </SliderItem>
-            ))}
-        </SlideShow>
-        <FeaturedCta>
-            <Button>View All</Button>
-        </FeaturedCta>
-    </Container>
-  )
+    return (
+        <Container>
+            <TextContainer>
+                <Title>FEATURED</Title>
+                <SubTitle>Men Summer Collection</SubTitle>
+            </TextContainer>
+            <SlideShow>
+                {mensWear.map((item) => (
+                    <SliderItem
+                        item={item}
+                        key={item.name}
+                        style={{ backgroundImage: `url(${item.image})` }}
+                    >
+                        <SliderLabel>{item.name}</SliderLabel>
+                    </SliderItem>
+                ))}
+            </SlideShow>
+            <FeaturedCta>
+                <Button>View All</Button>
+            </FeaturedCta>
+        </Container>
+    )
 }

@@ -27,8 +27,8 @@ const Container = styled.div`
     margin-top: 4rem;
 
     ${mobile({
-        marginTop: '6rem'
-    })}
+    marginTop: '6rem'
+})}
 `
 
 const TextContainer = styled.div`
@@ -59,19 +59,19 @@ const FeaturedGrid = styled.div`
     row-gap: 1.5rem;
 
     ${mobile({
-        gridTemplateColumns: '1fr',
-        gridTemplateRows: 'unset',
-    })}
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: 'unset',
+})}
 
     ${smTablet({
-        gridTemplateColumns: '1fr',
-        gridTemplateRows: 'unset',
-    })}
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: 'unset',
+})}
 
     ${lgTablet({
-        gridTemplateColumns: '1fr',
-        gridTemplateRows: 'unset',
-    })}
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: 'unset',
+})}
 `
 
 const FeaturedItem = styled.div`
@@ -111,22 +111,22 @@ const FeaturedItem = styled.div`
     }
 
     ${mobile({
-        gridRow: 'unset !important',
-        height: '450px',
-        backgroundPosition: 'center'
-    })}
+    gridRow: 'unset !important',
+    height: '450px',
+    backgroundPosition: 'center'
+})}
 
     ${smTablet({
-        gridRow: 'unset !important',
-        height: '500px',
-        backgroundPosition: 'center'
-    })}
+    gridRow: 'unset !important',
+    height: '500px',
+    backgroundPosition: 'center'
+})}
 
     ${lgTablet({
-        gridRow: 'unset !important',
-        height: '500px',
-        backgroundPosition: 'center'
-    })}
+    gridRow: 'unset !important',
+    height: '500px',
+    backgroundPosition: 'center'
+})}
 `
 
 const ItemLabel = styled.p`
@@ -134,27 +134,27 @@ const ItemLabel = styled.p`
     margin: 0;
 
     ${mobile({
-        fontSize: '1.2rem'
-    })}
+    fontSize: '1.2rem'
+})}
 `
 
 const FeaturedCta = styled.div`
     margin: 4rem 0 0;
 
     ${mobile({
-        display: 'grid',
-        placeItems: 'center'
-    })}
+    display: 'grid',
+    placeItems: 'center'
+})}
 
     ${smTablet({
-        display: 'grid',
-        placeItems: 'center'
-    })}
+    display: 'grid',
+    placeItems: 'center'
+})}
 
     ${lgTablet({
-        display: 'grid',
-        placeItems: 'center'
-    })}
+    display: 'grid',
+    placeItems: 'center'
+})}
 `
 
 const Button = styled.button`
@@ -174,27 +174,27 @@ const Button = styled.button`
 `
 
 export const Featured = () => {
-  return (
-    <Container>
-        <TextContainer>
-            <Title>FEATURED</Title>
-            <SubTitle>Ladies Summer Collection</SubTitle>
-        </TextContainer>
+    return (
+        <Container>
+            <TextContainer>
+                <Title>FEATURED</Title>
+                <SubTitle>Ladies Summer Collection</SubTitle>
+            </TextContainer>
 
-        <FeaturedGrid>
-            {ladiesWear.map((item) => (
-                <FeaturedItem 
-                    item={item} 
-                    key={item.name}
-                    style={{backgroundImage: `url(${item.image})`}}
-                >
-                    <ItemLabel>{item.name}</ItemLabel>
-                </FeaturedItem>
-            ))}
-        </FeaturedGrid>
-        <FeaturedCta>
-            <Button>View All</Button>
-        </FeaturedCta>
-    </Container>
-  )
+            <FeaturedGrid>
+                {ladiesWear.map((item) => (
+                    <FeaturedItem
+                        item={item}
+                        key={item.name}
+                        style={{ backgroundImage: `url(${item.image})` }}
+                    >
+                        <ItemLabel>{item.name}</ItemLabel>
+                    </FeaturedItem>
+                ))}
+            </FeaturedGrid>
+            <FeaturedCta>
+                <Button>View All</Button>
+            </FeaturedCta>
+        </Container>
+    )
 }
